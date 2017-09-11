@@ -17,20 +17,20 @@ class Crawler {
     constructor(settings, isExtractWords) {
         this.settings_crawler = settings.settings_crawler;
         this.settings_mysql = settings.settings_mysql;
-        this.wSaver = new WordSaver();
-        this.wLoader = new WordLoader();
+        // this.wSaver = new WordSaver();
+        // this.wLoader = new WordLoader();
 
         this.cSaver = new CommentSaver(this.settings_mysql);
         this.cLoader = new CommentLoader((comment) => {
 
-            if (isExtractWords) {
-                this.wLoader.extractEssential(comment.content, (res) => {
-                    var word = new Word(res, comment.write_date);
+            // if (isExtractWords) {
+            //     this.wLoader.extractEssential(comment.content, (res) => {
+            //         var word = new Word(res, comment.write_date);
 
-                    if (word.isValid)
-                        this.wSaver.save(word, () => {});
-                });
-            }
+            //         if (word.isValid)
+            //             this.wSaver.save(word, () => {});
+            //     });
+            // }
 
             this.cSaver.save(comment);
         });
@@ -39,14 +39,14 @@ class Crawler {
         this.pLoader = new PostLoader(this.settings_crawler, (res) => {
             var post = new Post(res);
 
-            if (isExtractWords) {
-                this.wLoader.extractEssential(post.content, (res) => {
-                    var word = new Word(res, post.write_date);
+            // if (isExtractWords) {
+            //     this.wLoader.extractEssential(post.content, (res) => {
+            //         var word = new Word(res, post.write_date);
 
-                    if (word.isValid)
-                        this.wSaver.save(word, () => {});
-                });
-            }
+            //         if (word.isValid)
+            //             this.wSaver.save(word, () => {});
+            //     });
+            // }
 
             this.pSaver.save(post);
             this.cLoader.loadComments(post);

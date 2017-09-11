@@ -1,9 +1,0 @@
-﻿{
-  "connectionLimit": 5,
-  "host": "192.168.14.121",
-  "user": "user",
-  "password": "password",
-  "database": "Board",
-  "postsTableName": "Inven_Posts",
-  "commentsTableName": "Inven_Comments"
-}

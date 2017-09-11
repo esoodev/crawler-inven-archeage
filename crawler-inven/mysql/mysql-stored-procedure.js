@@ -6,7 +6,7 @@ Simple module for executing mysql stored procedures.
 var mysql = require('mysql');
 var assert = require('assert');
 
-module.exports = class StoredProcedure {
+module.exports = class MysqlSP {
 
     constructor(connection) {
 
