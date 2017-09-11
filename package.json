@@ -1,0 +1,16 @@
+{
+  "name": "crawler-inven-archeage",
+  "version": "0.0.0",
+  "description": "crawler-inven-archeage",
+  "main": "app.js",
+  "author": {
+    "name": "eeso0"
+  },
+  "dependencies": {
+    "cps": "^1.0.2",
+    "crawler": "^1.0.5",
+    "html-entities": "^1.2.1",
+    "mysql": "^2.14.1",
+    "xml2js": "^0.4.17"
+  }
+}

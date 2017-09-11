@@ -1,0 +1,18 @@
+{
+  "settings_crawler": {
+    "url": "http://www.inven.co.kr/board/powerbbs.php?come_idx=2836&l=",
+    "postId_start": 192820,
+    "postId_end": 215165,
+    "skipIds": []
+  },
+
+  "settings_mysql": {
+    "connectionLimit": 5,
+    "host": "192.168.14.121",
+    "user": "user",
+    "password": "password",
+    "database": "Board",
+    "storedProcedureName_savePost": "Inven_Posts",
+    "storedProcedureName_saveComments": "Inven_Comments"
+  }
+}

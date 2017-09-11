@@ -1,0 +1,13 @@
+{
+  "postSelectors": [
+    ".viewTopBoardName",
+    ".articleDate",
+    ".articleWriter",
+    ".articleTitle",
+    ".articleBotUrl",
+    "#powerbbsContent"
+  ],
+  "maxConnections": 10,
+  "batchSize": 200,
+  "timeOut": 1000
+}
