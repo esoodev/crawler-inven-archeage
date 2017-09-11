@@ -1,14 +1,15 @@
-﻿var Executor = require('../mysql/storedProcedureExecutor');
-var StoredProcedure = require('../mysql/storedProcedure');
+﻿var MysqlSP = require('../mysql/mysql-stored-procedure');
 
 class PostSaver {
-    constructor() {
-        this.executor = new Executor();
+
+    constructor(connectionSetup) {
+        this.connectionSetup = connectionSetup;
+        this.mysqlsp = new MysqlSP(connectionSetup);
     }
 
     save(post, callback) {
         if (post.isValid)
-            this.executor.execute(new StoredProcedure('xlp_save_inven_post_test', post.parameters), (res) => { if (callback != null) callback(res) });
+            this.mysqlsp.execute(this.connectionSetup.storedProcedureName_savePost, post.parameters, (res) => { if (callback != null) callback(res) });
     }
 }
 

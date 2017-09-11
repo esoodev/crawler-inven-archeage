@@ -20,7 +20,7 @@ class Crawler {
         this.wSaver = new WordSaver();
         this.wLoader = new WordLoader();
 
-        this.cSaver = new CommentSaver();
+        this.cSaver = new CommentSaver(this.settings_mysql);
         this.cLoader = new CommentLoader((comment) => {
 
             if (isExtractWords) {
@@ -35,7 +35,7 @@ class Crawler {
             this.cSaver.save(comment);
         });
 
-        this.pSaver = new PostSaver();
+        this.pSaver = new PostSaver(this.settings_mysql);
         this.pLoader = new PostLoader(this.settings_crawler, (res) => {
             var post = new Post(res);
 

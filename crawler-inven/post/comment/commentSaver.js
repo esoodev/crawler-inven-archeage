@@ -1,18 +1,16 @@
-﻿var Executor = require('../../mysql/storedProcedureExecutor');
-var StoredProcedure = require('../../mysql/storedProcedure');
+﻿var MysqlSP = require('../../mysql/mysql-stored-procedure');
 
 class CommentSaver {
 
-    constructor() {
-        this.executor = new Executor();
+    constructor(connectionSetup) {
+        this.connectionSetup = connectionSetup;
+        this.mysqlsp = new MysqlSP(connectionSetup);
     }
 
     save(comment, callback) {
-        
-        // Ignore links
-        if (comment.isValid) {
-            this.executor.execute(new StoredProcedure('xlp_save_inven_comment_test', comment.parameters), (res) => { if (callback != null) callback(res) });
-        }
+
+        if (comment.isValid)
+            this.mysqlsp.execute(this.connectionSetup.storedProcedureName_saveComment, comment.parameters, (res) => { if (callback != null) callback(res) });
     }
 }
 module.exports = CommentSaver;
