@@ -14,10 +14,10 @@
 
 ## Notes
 ### 자유게시판
-자유게시판 id : 2645
-자유게시판 2017 start post id : 451894
-자유게시판 error-causing post id (skip this post) : 252122 
+* ID : 2645
+* 2017/1/1 post ID : 451894
+* Error-causing post id (skip this) : 252122 
 ### 통합직업게시판
-통합직업게시판 id : 2836
-통합직업게시판 2017 start post id : 192820
+* ID : 2836
+* 2017/1/1 post ID : 192820
 
