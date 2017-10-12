@@ -31,7 +31,11 @@ class Post {
         if(this.url_parts.query.l) {
             this.post_id = this.url_parts.query.l;
         } else {
-            this.post_id = this.url_parts.path.split('/')[4]
+            try {
+                this.post_id = this.url_parts.path.split('/')[4]
+            } catch (err) {
+                console.log('Could not retrieve post_id. Is the crawl result valid?') 
+            }
         }
         
     }
@@ -42,7 +46,11 @@ class Post {
         if(this.url_parts.query.come_idx) {
             this.board_id = this.url_parts.query.come_idx;
         } else {
+            try {
             this.board_id = this.url_parts.path.split('/')[3]
+            } catch (err) {
+                console.log('Could not retrieve board_id. Is the crawl result valid?')
+            }
         }
         
     }
