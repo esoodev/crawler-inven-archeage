@@ -23,4 +23,4 @@ var loader = new PostLoader(settings_crawler, (res) => {
 //     saver.save(post);
 // }, false);
 
-loader.crawl(215165);
+loader.crawl(200);

@@ -1,8 +1,8 @@
 {
   "settings_crawler": {
-    "url": "http://www.inven.co.kr/board/powerbbs.php?come_idx=2836&l=",
-    "postId_start": 192820,
-    "postId_end": 215165,
+    "url": "http://www.inven.co.kr/board/battlegrounds/5046/",
+    "postId_start": 1,
+    "postId_end": 31253,
     "skipIds": []
   },
 
@@ -12,7 +12,7 @@
     "user": "user",
     "password": "password",
     "database": "Board",
-    "storedProcedureName_savePost": "xlp_save_inven_post_test",
-    "storedProcedureName_saveComment": "xlp_save_inven_comment_test"
+    "storedProcedureName_savePost": "xlp_save_inven_post",
+    "storedProcedureName_saveComment": "xlp_save_inven_comment"
   }
 }

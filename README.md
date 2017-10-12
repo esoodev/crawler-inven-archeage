@@ -1,5 +1,5 @@
 ﻿# X3 Inven Crawler
-인벤 아키에이지 크롤링 툴. 질문이나 버그는 이수민 (eeso0@xlgames.com) 으로 연락주세요.
+인벤 크롤링 툴. 질문이나 버그는 이수민 (eeso0@xlgames.com) 으로 연락주세요.
 
 
 ## 사용방법
@@ -13,11 +13,13 @@
 
 
 ## Notes
-### 자유게시판
+### 아키에이지 자유게시판
 * ID : 2645
 * 2017/1/1 post ID : 451894
 * Error-causing post id (skip this) : 252122 
-### 통합직업게시판
+### 아키에이지 통합직업게시판
 * ID : 2836
 * 2017/1/1 post ID : 192820
+### 배틀그라운드
+* URL :  http://www.inven.co.kr/board/battlegrounds/5046/
 
