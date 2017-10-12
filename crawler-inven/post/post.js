@@ -27,13 +27,24 @@ class Post {
 
     _setPost_id() {
         //return this.url_parts.query.l;
-        this.post_id = this.url_parts.query.l;
+
+        if(this.url_parts.query.l) {
+            this.post_id = this.url_parts.query.l;
+        } else {
+            this.post_id = this.url_parts.path.split('/')[4]
+        }
         
     }
 
     _setBoard_id() {
         //return this.url_parts.query.come_idx;
-        this.board_id = this.url_parts.query.come_idx;
+
+        if(this.url_parts.query.come_idx) {
+            this.board_id = this.url_parts.query.come_idx;
+        } else {
+            this.board_id = this.url_parts.path.split('/')[3]
+        }
+        
     }
 
     _setServer() {

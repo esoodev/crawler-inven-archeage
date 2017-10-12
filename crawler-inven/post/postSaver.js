@@ -10,6 +10,8 @@ class PostSaver {
     save(post, callback) {
         if (post.isValid)
             this.mysqlsp.execute(this.connectionSetup.storedProcedureName_savePost, post.parameters, (res) => { if (callback != null) callback(res) });
+        else 
+            console.log('Invalid post. Not saving. : ' + JSON.stringify(post)) 
     }
 }
 
